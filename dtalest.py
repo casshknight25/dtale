@@ -52,11 +52,10 @@ CSS = """
 
 with st.sidebar.header('Upload your csv file'):
     df = st.sidebar.file_uploader('Upload your csv file', type=['csv'])
-
-    dfst = pd.read_csv(df)
-    
-startup(data_id="1", data=dfst)
-dfs = get_instance("1").data
+    if df is not None:
+        dfst = pd.read_csv(df)
+        startup(data_id="1", data=dfst)
+        dfs = get_instance("1").data
 
 
 html = f"""
