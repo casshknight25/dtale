@@ -1,2 +1,1 @@
-dtale==2.3.0
-streamlit==1.8.0.
+dtale==2.4.0.
